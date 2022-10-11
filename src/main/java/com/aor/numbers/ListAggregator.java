@@ -1,5 +1,9 @@
 package com.aor.numbers;
 
+import org.graalvm.compiler.debug.Assertions;
+import org.testng.annotations.Test;
+
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -7,6 +11,11 @@ import java.util.List;
  * into a single integer using various functions.
  */
 public class ListAggregator {
+    
+    List<Integer> list; 
+    
+    
+
     /**
      * Sums all numbers in a list.
      * @return The sum of all the values in the list.
@@ -25,7 +34,7 @@ public class ListAggregator {
      * @return The maximum value in the list.
      */
     public Integer max(List<Integer> list) {
-        int max = 0;
+        int max = list.get(0);
 
         for (Integer number : list)
             if (number > max)
@@ -52,10 +61,7 @@ public class ListAggregator {
      * Counts the number of distinct numbers in a list.
      * @return The number of distinct numbers.
      */
-    public int distinct(List<Integer> list) {
-        ListDeduplicator deduplicator = new ListDeduplicator();
+    public int distinct(List<Integer> list,GenericListDeduplicator deduplicator) {
         List<Integer> distinct = deduplicator.deduplicate(list);
-
         return distinct.size();
-    }
-}
+    }}
