@@ -1,14 +1,15 @@
 package com.aor.numbers;
+import org.junit.jupiter.api.Test;
 
-import com.aor.numbers.ListSorter;
+
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
-import org.testng.annotations.Test;
+
 
 import java.util.Arrays;
 import java.util.List;
 
 public class ListSorterTest {
+    private List<Integer> list;
 
 
 

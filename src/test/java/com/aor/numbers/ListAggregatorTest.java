@@ -73,7 +73,7 @@ public class ListAggregatorTest {
     }
 
     @Test
-    public void bug_sort_8276() {
+    public void bug_sort_8726() {
         List<Integer> list = Arrays.asList(1,2,4,2);
         class StubListDeduplicator implements GenericListDeduplicator{
             @Override public List<Integer> deduplicate(List<Integer> list) {
@@ -82,7 +82,7 @@ public class ListAggregatorTest {
         }
         ListAggregator aggregator = new ListAggregator();
         StubListDeduplicator deduplicator = new StubListDeduplicator();
-        int distinct = aggregator.distinct(list, deduplicator);
+        int distinct = aggregator.distinct(Arrays.asList(1,2,4,2), deduplicator);
         Assertions.assertEquals(3, distinct);
     }
 

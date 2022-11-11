@@ -11,11 +11,6 @@ import java.util.List;
  * into a single integer using various functions.
  */
 public class ListAggregator {
-    
-    List<Integer> list; 
-    
-    
-
     /**
      * Sums all numbers in a list.
      * @return The sum of all the values in the list.

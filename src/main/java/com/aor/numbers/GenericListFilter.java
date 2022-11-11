@@ -1,2 +1,5 @@
-package com.aor.numbers;public class GenericListFilter {
+package com.aor.numbers;
+
+public interface GenericListFilter {
+    public boolean accept(Integer number);
 }
