@@ -15,4 +15,5 @@ public class ListFilterer {
         for (int i : list)
             if (filter.accept(i)) filtered.add(i);
         return filtered;
-    }}
+    }
+}
